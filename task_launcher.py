@@ -14,7 +14,7 @@ def make_pi_tasks():
     # then gather results
     for task in pending_tasks:
         task.wait()
-        if not task.status == 'SUCCESS':
+        if not task.successful():
             raise Exception(task.result)
         results.append(task.result)
 
