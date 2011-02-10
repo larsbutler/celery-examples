@@ -1,0 +1,46 @@
+Package requirements:
+
+    These examples were built and tested with the following Python package
+    configuration (displayed using `pip freeze`):
+
+    Babel==0.9.5
+    SQLAlchemy==0.6.6
+    amqplib==0.6.1
+    anyjson==0.3
+    carrot==0.10.7
+    celery==2.0.3
+    distribute==0.6.14
+    git-remote-helpers==0.1.0
+    importlib==1.0.2
+    logilab-astng==0.21.1
+    logilab-common==0.54.0
+    pep8==0.6.1
+    pylibmc==1.1.1
+    pylint==0.23.0
+    pyparsing==1.5.5
+    python-dateutil==1.5
+    unittest2==0.5.1
+    virtualenv==1.5.1
+    virtualenvwrapper==2.5.3
+    wsgiref==0.1.2
+
+Other requirements:
+
+    RabbitMQ (these examples were built/tested with version 2.1.1, though other
+    2.x.x version should work as well)
+    
+    Installing RabbitMQ with homebrew:
+        $ brew install rabbitmq
+
+    Several RabbitMQ server installation packages are also available here:
+    http://www.rabbitmq.com/server.html
+
+    You will need to run the following commands to configure RabbitMQ:
+        $ sudo rabbitmqctl add_user celeryuser celery
+        $ sudo rabbitmqctl add_vhost celeryvhost
+        $ sudo rabbitmqctl set_permissions -p celeryvhost celeryuser ".*" ".*" ".*"
+    (Note: the user/password configuration here must match the example
+    celeryconfig.py.)
+
+    Starting RabbitMQ:
+        $ sudo rabbitmq-server
