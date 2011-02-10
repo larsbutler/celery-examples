@@ -44,3 +44,10 @@ Other requirements:
 
     Starting RabbitMQ:
         $ sudo rabbitmq-server
+
+To run an example:
+
+    - cd into the directory containing celeryconfig.py
+    - launch rabbitmq: $ sudo rabbitmq-server
+    - launch celeryd: $ celeryd
+    - run the example: $ python task_launcher.py
