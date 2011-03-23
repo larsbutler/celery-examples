@@ -1,2 +1,3 @@
 *.pyc
 misc/
+celeryconfig.py
