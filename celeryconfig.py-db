@@ -2,16 +2,10 @@ import sys
 
 sys.path.append('.')
 
-BROKER_HOST = "localhost"
-BROKER_PORT = 5672
-BROKER_USER = "guest"
-BROKER_PASSWORD = "guest"
-BROKER_VHOST = "/"
+BROKER_BACKEND = "sqlalchemy"
+BROKER_HOST = "sqlite:///backend.db"
 
 CELERY_RESULT_BACKEND = "database"
-CELERY_RESULT_DBURI = "sqlite:///celery_example.db"
-
-# enable verbose logging from SQLAlchemy
-CELERY_RESULT_ENGINE_OPTIONS = {"echo": true}
+CELERY_RESULT_DBURI = "sqlite:///result.db"
 
 CELERY_IMPORTS = ("tasks",)

@@ -12,6 +12,7 @@ Package requirements:
     git-remote-helpers==0.1.0
     importlib==1.0.2
     kombu==1.0.6
+    kombu-sqlalchemy==0.9.0
     logilab-astng==0.21.1
     logilab-common==0.54.0
     pep8==0.6.1
