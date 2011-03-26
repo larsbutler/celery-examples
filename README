@@ -47,7 +47,9 @@ Other requirements:
 
 To run an example:
 
-    - cd into the directory containing celeryconfig.py
-    - launch rabbitmq: $ sudo rabbitmq-server
-    - launch celeryd: $ celeryd
-    - run the example: $ python demo.py
+    - cd into the directory containing celeryconfig.py-* files
+    - copy the desired celeryconfig.py-* file to ./celeryconfig.py
+    - launch any other required processes (for example, you may need to launch
+      rabbitmq: $ sudo rabbitmq-server)
+    - launch celery daemon: $ celeryd
+    - run the demo: $ python demo.py
