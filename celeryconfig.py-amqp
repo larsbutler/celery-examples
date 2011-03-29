@@ -10,5 +10,4 @@ BROKER_VHOST = "celeryvhost"
 
 CELERY_RESULT_BACKEND = "amqp"
 
-
 CELERY_IMPORTS = ("tasks",)

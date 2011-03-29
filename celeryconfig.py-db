@@ -5,7 +5,11 @@ sys.path.append('.')
 BROKER_BACKEND = "sqlalchemy"
 BROKER_HOST = "sqlite:///backend.db"
 
-CELERY_RESULT_BACKEND = "database"
+# optional: "database" is the default result backend
+# CELERY_RESULT_BACKEND = "database"
 CELERY_RESULT_DBURI = "sqlite:///result.db"
+
+# optional: enable verbose logging from SQLAlchemy.
+# CELERY_RESULT_ENGINE_OPTIONS = {"echo": True}
 
 CELERY_IMPORTS = ("tasks",)
