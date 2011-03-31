@@ -1,4 +1,24 @@
+import jpype
+
 from celery.decorators import task
+
+@task
+def java_task(some_num):
+    print "java_task started"
+    print "Check if JVM is started"
+    if not jpype.isJVMStarted():
+        print "JVM is not started. Starting it now..."
+        jpype.startJVM(jpype.getDefaultJVMPath(), "-d log4j.debug")
+    print "JVM is now running"
+    print "Making a JInt with the value %d" % some_num
+    res = jpype.JInt(some_num)
+    print "The JInt is %s" % res
+    print "Shutting down the JVM"
+    jpype.shutdownJVM()
+    print "JVM is now shut down"
+    print "End of task, returning result"
+    return res
+
 
 def make_pi(num_calcs):
     """
@@ -21,7 +41,8 @@ def make_pi_task(num_calcs):
     """
     Task which calls the make_pi function to approximate pi.
 
-    This is just a simple example of how can create tasks using plain functions.
+    This is just a simple example of how can create tasks using plain
+    functions.
     """
     return make_pi(num_calcs)
 
