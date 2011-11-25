@@ -1,38 +1,13 @@
-Package requirements:
+Required packages:
 
-    These examples were built and tested with the following Python package
-    configuration (displayed using `pip freeze`):
-
-    Babel==0.9.5
-    SQLAlchemy==0.6.6
-    amqplib==0.6.1
-    anyjson==0.3.1
-    celery==2.2.4
-    distribute==0.6.14
-    git-remote-helpers==0.1.0
-    importlib==1.0.2
-    kombu==1.0.6
-    kombu-sqlalchemy==0.9.0
-    logilab-astng==0.21.1
-    logilab-common==0.54.0
-    pep8==0.6.1
-    pylibmc==1.1.1
-    pylint==0.23.0
-    pyparsing==1.5.5
-    python-dateutil==1.5
-    unittest2==0.5.1
-    virtualenv==1.5.1
-    virtualenvwrapper==2.5.3
-    wsgiref==0.1.2
+    celery (http://celeryproject.org/)
+        This example was tested with version 2.3.1
 
 Other requirements:
 
-    RabbitMQ (these examples were tested with version 2.1.1, any version that
-        supports AMQP 0.9.1 should work)
+    RabbitMQ
+        This example was tested with version 2.6.1
     
-    Installing RabbitMQ with homebrew:
-        $ brew install rabbitmq
-
     Several RabbitMQ server installation packages are also available here:
     http://www.rabbitmq.com/server.html
 
@@ -45,11 +20,9 @@ Other requirements:
     Starting RabbitMQ:
         $ sudo rabbitmq-server
 
-To run an example:
+To run the demo:
 
-    - cd into the directory containing celeryconfig.py-* files
-    - copy the desired celeryconfig.py-* file to ./celeryconfig.py
-    - launch any other required processes (for example, you may need to launch
-      rabbitmq: $ sudo rabbitmq-server)
+    - start rabbitmq-server
+    - cd into the directory containing celeryconfig.py
     - launch celery daemon: $ celeryd
-    - run the demo: $ python demo.py
+    - in a separate terminal (in the same dir): $ python demo.py
