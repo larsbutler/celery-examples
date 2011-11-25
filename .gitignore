@@ -1,6 +1,5 @@
 *.pyc
 misc/
-celeryconfig.py
 result.db
 backend.db
 
