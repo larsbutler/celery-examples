@@ -1,3 +1,6 @@
+This is a small and extremely lightweight demo of using Celery for distributed computation.
+
+
 Required packages:
 
     celery (http://celeryproject.org/)
